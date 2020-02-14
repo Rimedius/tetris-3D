@@ -11,6 +11,9 @@ level=1
 bloks = {0:[[1,0],[0,0]], 1:[[1,1],[0,0]]}
 fild = np.zeros((fild_size, fild_size))
 
+# Hello GitHUb
+# Additional line
+
 print('START YOU GAME' )
 abc = np.array(['a','b','c','d','e'])
 
