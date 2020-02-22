@@ -3,6 +3,7 @@ import numpy as np
 import copy
 import tetrislib
 'this is a start file'
+from main import tetrislib
 
 print('START YOU GAME' )
 print('____________________')
