@@ -2,7 +2,7 @@ import random
 import numpy as np
 import copy
 import tetrislib
-
+'this is a start file'
 
 print('START YOU GAME' )
 print('____________________')
