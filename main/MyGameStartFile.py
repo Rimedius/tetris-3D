@@ -3,13 +3,15 @@ import random
 import numpy as np
 import copy
 
-number_variants_blocks=2
-number_blocks=3
-fild_size=5
-level=1
+# Game setup
+# _________________________________________________________ #
+NUMBER_VARIANTS_BLOCKS=2
+NUMBER_BLOCKS=3
+FIELD_SIZE=5
+LEVEL=1
 
-bloks = {0:[[1,0],[0,0]], 1:[[1,1],[0,0]]}
-fild = np.zeros((fild_size, fild_size))
+blocks = {0:[[1, 0], [0, 0]], 1:[[1, 1], [0, 0]]}
+field = np.zeros((FIELD_SIZE, FIELD_SIZE))
 
 print('START YOU GAME' )
 abc = np.array(['a','b','c','d','e'])
@@ -17,11 +19,11 @@ abc = np.array(['a','b','c','d','e'])
 # fild[0,:] = abc
 # fild = np.insert(fild, 0, abc, axis=1)
 # fild = np.stack((abc, fild))
-print(fild)
+print(field)
 
 bar = [0, 0, 0]
 for i in range(3):
-    bar[i] = bloks[np.random.randint(2)]
+    bar[i] = blocks[np.random.randint(2)]
 print('___a_______s_______d____')
 print(bar[0][0],bar[1][0],bar[2][0])
 print(bar[0][1],bar[1][1],bar[2][1])
@@ -56,8 +58,8 @@ if my_blok in ['a', 's', 'd']:
         print(f'you choose: {index_x} - {index_y}')
 
         for i in range(2):
-            fild[index_y][index_x+i] = blok[i]
+            field[index_y][index_x + i] = blok[i]
 
-        print(fild)
+        print(field)
 else:
     print('you are wrong. Bay-bay!')
