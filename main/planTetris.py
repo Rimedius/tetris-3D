@@ -69,9 +69,10 @@ while GAME_RUN:
         print(selected_block)
 
     # Get real bounding box of selected block
+    # TODO: how about situation [5, 1], [1, 5] ??
     width_block, height_block = max(np.nonzero(selected_block), key=lambda x: x[1])
 
-    # Place block to field
+    # Select position on gameboard
     continue_select = True
     while continue_select:
 
@@ -91,6 +92,10 @@ while GAME_RUN:
             continue_select = False
         else :
             print(f"Cannot fit block!")
+
+    # Place block into gameboard
+    # TODO: change the logic -> this couldn't work
+    gameboard[index_x:index_x + selected_block.shape[0], index_y:index_y + selected_block.shape[1]] += selected_block
 
     '''gamelogic actions
     take place -> check place y/n
